@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
 
-  const navItems = ["Features", "Resources", "Pricing", "Testimonials", "FAQ"]
+  const navItems = ["About", "Features", "Resources", "Pricing", "Testimonials", "FAQ"]
 
   // Animation Variants
   const containerVariants: Variants = {
@@ -33,37 +33,41 @@ const Navbar = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full py-3 px-4 ">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full py-4 md:py-6 px-4">
       <motion.div
-        className="flex items-center justify-between w-full max-w-2xl px-3 py-3 bg-black/50 rounded-full relative z-10"
+        className="flex items-center justify-between w-full max-w-6xl px-6 py-3 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full relative z-10 shadow-2xl shadow-black/50"
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 250, damping: 25 }}
       >
         {/* Logo */}
         <motion.div
-          className="flex items-center gap-2 cursor-pointer select-none"
+          className="flex items-center gap-3 cursor-pointer select-none"
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
         >
-          <motion.img
-            src={logo.src}
-            alt="Warroom Logo"
-            className="w-9 h-9 rounded-full"
-            transition={{ duration: 0.7, ease: "easeInOut" }}
-          />
+          <div className="relative flex items-center justify-center">
+            <motion.img
+              src={logo.src}
+              alt="Warroom Logo"
+              className="w-10 h-10 rounded-full border border-white/10 object-cover"
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+            />
+            {/* Glow effect behind logo */}
+            <div className="absolute inset-0 bg-yellow-500/20 blur-lg rounded-full -z-10" />
+          </div>
           <motion.span
-            className="text-white font-semibold tracking-tight text-lg "
+            className="text-white font-bold tracking-tight text-lg font-plusJakartaSans"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            Warroom
+            WARROOM
           </motion.span>
         </motion.div>
 
         {/* Desktop Navigation */}
         <motion.nav
-          className="hidden md:flex items-center gap-6"
+          className="hidden md:flex items-center gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -71,14 +75,14 @@ const Navbar = () => {
           {navItems.map((item) => (
             <motion.a
               key={item}
-              href="#"
+              href={item === "About" ? "/about-us" : `#${item.toLowerCase()}`}
               variants={itemVariants}
-              className="relative text-sm text-white transition font-medium"
+              className="relative text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide py-2"
               whileHover={{ y: -2 }}
             >
               {item}
               <motion.span
-                className="absolute bottom-0 left-0 w-full h-0.5 scale-x-0 origin-left"
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 scale-x-0 origin-left rounded-full"
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
@@ -95,18 +99,19 @@ const Navbar = () => {
         >
           <a
             href="#"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full hover:shadow-lg transition-all"
+            className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-black bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full hover:shadow-[0_0_20px_-5px_rgba(234,179,8,0.5)] transition-all duration-300 group overflow-hidden"
           >
-            Contact Us
+            <span className="relative z-10">JOIN NOW</span>
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
         </motion.div>
 
         {/* Mobile Toggle */}
         <motion.button
           aria-label="Toggle menu"
-          className="md:hidden p-2 rounded-lg bg-white/15 text-white"
+          className="md:hidden p-2 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors active:scale-95"
           onClick={toggleMenu}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <Menu className="h-6 w-6" />
@@ -119,7 +124,7 @@ const Navbar = () => {
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -128,56 +133,77 @@ const Navbar = () => {
 
             {/* Panel */}
             <motion.aside
-              className="fixed right-0 top-0 bottom-0 w-80 bg-neutral-900 text-white z-50 p-8 shadow-2xl md:hidden"
+              className="fixed right-0 top-0 bottom-0 w-full sm:w-80 bg-black/90 backdrop-blur-2xl border-l border-white/10 text-white z-50 p-6 shadow-2xl md:hidden flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 250, damping: 30 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="flex justify-between items-center mb-10">
-                <span className="text-lg font-semibold">Menu</span>
+              {/* Mobile Header */}
+              <div className="flex justify-between items-center mb-12">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={logo.src}
+                    alt="Warroom Logo"
+                    className="w-8 h-8 rounded-full border border-white/10"
+                  />
+                  <span className="font-bold tracking-tight">WARROOM</span>
+                </div>
                 <motion.button
                   onClick={toggleMenu}
                   whileHover={{ rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-2 rounded-full bg-white/10"
+                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 >
                   <X className="h-5 w-5 text-white" />
                 </motion.button>
               </div>
 
+              {/* Mobile Nav Items */}
               <motion.nav
-                className="flex flex-col space-y-5"
+                className="flex flex-col space-y-6 flex-1 justify-center items-center"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
               >
-                {["Home", ...navItems].map((item) => (
+                {["Home", ...navItems].map((item, i) => (
                   <motion.a
                     key={item}
-                    href="#"
+                    href={
+                      item === "Home" ? "/" :
+                      item === "About" ? "/about-us" :
+                      `#${item.toLowerCase()}`
+                    }
                     variants={itemVariants}
-                    className="text-lg text-white/90 hover:text-white transition"
+                    className="text-3xl font-bold text-white/90 hover:text-yellow-400 transition-colors flex items-center gap-4 group justify-start w-full"
                     onClick={toggleMenu}
                   >
+                    <span className="text-sm font-mono text-white/30 group-hover:text-yellow-500/50 transition-colors">0{i + 1}</span>
                     {item}
                   </motion.a>
                 ))}
               </motion.nav>
 
+              {/* Mobile CTA */}
               <motion.div
-                className="mt-10"
+                className="mt-auto pt-8 border-t border-white/10"
                 variants={itemVariants}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
                 <a
                   href="#"
-                  className="block text-center py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all"
+                  className="block text-center py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold shadow-lg hover:shadow-orange-500/20 transition-all active:scale-95"
                   onClick={toggleMenu}
                 >
-                  Get Started
+                  GET STARTED
                 </a>
+
+                <div className="mt-6 text-center">
+                  <p className="text-xs text-white/30 font-mono">
+                    SECURE CONNECTION ESTABLISHED
+                  </p>
+                </div>
               </motion.div>
             </motion.aside>
           </>

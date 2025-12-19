@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { cn } from './lib/utils';
+import { CircularGallery, Autoscroll } from '../components/ui/autoscroll';
 import Lenis from '@studio-freight/lenis'
-import { ZoomParallax } from '../components/ui/zoom-parallax';
 import cert0 from '../public/cert0.jpeg';
 import cert2 from '../public/cert2.jpeg';
 import cert4 from '../public/cert4.jpeg';
@@ -13,51 +13,56 @@ import cert8 from '../public/cert8.jpeg'
 
 export default function DefaultDemo() {
 
-	React.useEffect( () => {
-        const lenis = new Lenis()
-       
-        function raf(time: number) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+	React.useEffect(() => {
+		const lenis = new Lenis()
 
-        requestAnimationFrame(raf)
-    },[])
+		function raf(time: number) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+
+		requestAnimationFrame(raf)
+	}, [])
 
 
 	const images = [
 		{
-			src: cert8.src,
-			alt: 'Dinesh#1',
+			image: cert8.src,
+			text: 'Dinesh#1',
 		},
 		{
-			src: cert7.src,
-			alt: 'ramu#2',
+			image: cert7.src,
+			text: 'ramu#2',
 		},
 		{
-			src: cert0.src,
-			alt: 'murugan#3',
+			image: cert0.src,
+			text: 'murugan#3',
 		},
 		{
-			src: cert5.src,
-			alt: 'ventakatesh#4',
+			image: cert5.src,
+			text: 'ventakatesh#4',
 		},
 		{
-			src: cert4.src,
-			alt: 'Sudhagar#5',
+			image: cert4.src,
+			text: 'Sudhagar#5',
 		},
 		{
-			src: cert2.src,
-			alt: 'Surendar#6',
+			image: cert2.src,
+			text: 'Surendar#6',
 		},
 		{
-			src: cert6.src,
-			alt: 'karthick#7',
+			image: cert6.src,
+			text: 'karthick#7',
 		},
 	];
 
+	const autoscrollImages = images.map(img => ({
+		src: img.image,
+		alt: img.text
+	}));
+
 	return (
-		<main className="min-h-screen w-full">
+		<main className="min-h-screen w-full bg-black">
 			<div className="relative flex h-[30vh] items-center justify-center">
 				{/* Radial spotlight */}
 				<div
@@ -68,11 +73,20 @@ export default function DefaultDemo() {
 						'blur-[30px]',
 					)}
 				/>
-				<h1 className="text-center text-4xl font-bold text-black font-bitcount font-normal md:text-6xl lg:text-7xl">
+				<h1 className="text-center text-4xl font-bold text-white tracking-tighter md:text-6xl lg:text-7xl">
 					Students Achievements
 				</h1>
 			</div>
-			<ZoomParallax images={images} />
+
+			{/* Mobile View: Simple Autoscroll */}
+			<div className="block md:hidden w-full">
+				<Autoscroll images={autoscrollImages} duration={100} />
+			</div>
+
+			{/* Desktop View: 3D Circular Gallery */}
+			<div className="hidden md:block h-[600px] w-full">
+				<CircularGallery items={images} bend={3} borderRadius={0.05} />
+			</div>
 		</main>
 	);
 }

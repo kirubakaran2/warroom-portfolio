@@ -66,7 +66,6 @@ const testimonials = [
         description:
             "Simple is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
         avatar: emoji7.src,
-        image: "https://media.licdn.com/dms/image/v2/D560BAQHoE87cnI8KHA/company-logo_200_200/B56ZWov51LHsAI-/0/1742292885770/fundednext_logo?e=2147483647&v=beta&t=vBCPdPqb8Xn0hkOyWRM5nxH0iso7FYG3q7zefuuzw3M",
     },
     {
         name: "Paula Smith",
@@ -74,7 +73,6 @@ const testimonials = [
         description:
             "Simple is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
         avatar: emoji8.src,
-        image: "https://the5ers.com/wp-content/uploads/2025/09/5erslogo.svg",
     },
     {
         name: "Paula Smith",
@@ -82,7 +80,14 @@ const testimonials = [
         description:
             "Simple is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
         avatar: emoji9.src,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FvTxRgCMO_69x66QbqAvruotoFi9UA0vIg&s",
+    },
+    // New testimonial condensed from user submission
+    {
+        name: "Arul",
+        profession: "Mentored Trader",
+        description:
+            "I joined Dinesh's mentorship as my last hope — within months I passed the 50k funded challenge, stopped overtrading, learned to read price and manage risk, and gained the confidence to trade consistently; Dinesh is always available and truly supportive.",
+        avatar: emoji1.src,
     },
 ];
 const duplicatedTestimonials = [...testimonials, ...testimonials];
@@ -92,9 +97,9 @@ const FUITestimonialWithSlide = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
     return (
-        
+
         <div ref={containerRef} className=" font-sanchez relative min-h-screen bg-black text-white font-space py-20 px-6 flex flex-col items-center gap-16 overflow-hidden">
-      <GridVignetteBackground />
+            <GridVignetteBackground />
             <div className="w-full mx-auto px-10 h-full flex flex-col justify-center">
                 <div className='mb-10'>
 
@@ -109,49 +114,49 @@ const FUITestimonialWithSlide = () => {
                 <div style={{
                     maskImage:
                         'linear-gradient(to left, transparent 0%, white 20%, white 80%, transparent 95%)',
-                }}  className="flex relative overflow-hidden  shrink-0   max-w-full  overflow-hidden ">
-                  <div
-                    className="flex animate-x-slider gap-5 w-max"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                    onTouchStart={() => setIsPaused(true)}
-                    onTouchEnd={() => setIsPaused(false)}
-                    onFocus={() => setIsPaused(true)}
-                    onBlur={() => setIsPaused(false)}
-                    style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
-                  >
-                    {duplicatedTestimonials.map((testimonial, indx) => {
-                        return (
+                }} className="flex relative overflow-hidden  shrink-0   max-w-full  overflow-hidden ">
+                    <div
+                        className="flex animate-x-slider gap-5 w-max"
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                        onTouchStart={() => setIsPaused(true)}
+                        onTouchEnd={() => setIsPaused(false)}
+                        onFocus={() => setIsPaused(true)}
+                        onBlur={() => setIsPaused(false)}
+                        style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+                    >
+                        {duplicatedTestimonials.map((testimonial, indx) => {
+                            return (
 
-                            <div key={indx} className="border-[1.2px]  flex flex-col bg-page-gradient border-white/20  dark:border-white/10  rounded-lg shrink-0 grow-0 w-[600px] h-full">
-                                <p className="px-5 py-5 text-pretty text-xl font-extralight  text-text-primary dark:text-dark-text-primary sm:text-2xl md:text-3xl tracking-tighter">
-                                    &quot;{testimonial.description}.&quot;
+                                <div key={indx} className="border-[1.2px]  flex flex-col bg-page-gradient border-white/20  dark:border-white/10  rounded-lg shrink-0 grow-0 w-[600px] h-full">
+                                    <p className="px-5 py-5 text-pretty text-xl font-extralight  text-text-primary dark:text-dark-text-primary sm:text-2xl md:text-3xl tracking-tighter">
+                                        &quot;{testimonial.description}.&quot;
 
 
-                                </p>
-                                <div className="border-t-[1.2px]  w-full flex gap-1 overflow-hidden">
-                                    <div className="w-3/4 flex gap-3 items-center px-4 py-3">
-                                        <img src={testimonial.avatar} alt='avatar' width={64} height={64} />
-                                        <div className='flex flex-col flex-1 gap-0 justify-start items-start'>
-                                            <h5 className='text-base font-medium md:text-lg'>{testimonial.name}</h5>
-                                            <p className='text-white/30 dark:text-white/50 mt-[-4px] text-sm text-text-tertiary dark:text-dark-text-tertiary md:text-base'>{testimonial.profession}</p>
+                                    </p>
+                                    <div className="border-t-[1.2px]  w-full flex gap-1 overflow-hidden">
+                                        <div className="w-3/4 flex gap-3 items-center px-4 py-3">
+                                            <img src={testimonial.avatar} alt='avatar' width={64} height={64} />
+                                            <div className='flex flex-col flex-1 gap-0 justify-start items-start'>
+                                                <h5 className='text-base font-medium md:text-lg'>{testimonial.name}</h5>
+                                                <p className='text-white/30 dark:text-white/50 mt-[-4px] text-sm text-text-tertiary dark:text-dark-text-tertiary md:text-base'>{testimonial.profession}</p>
+
+                                            </div>
+
+                                        </div>
+                                        <div className='w-[1px] bg-white/20 dark:bg-white/20' />
+
+                                        <div className='max-w-full self-center pl-2'>
+                                            <img src={testimonial.image} className='h-10 w-28 px-2 flex-none' alt='company_logo' width={112} height={40} />
 
                                         </div>
 
                                     </div>
-                                    <div className='w-[1px] bg-white/20 dark:bg-white/20' />
-
-                                    <div className='max-w-full self-center pl-2'>
-                                        <img src={testimonial.image} className='h-10 w-28 px-2 flex-none' alt='company_logo' width={112} height={40} />
-
-                                    </div>
 
                                 </div>
-
-                            </div>
-                        )
-                    })}
-                 </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

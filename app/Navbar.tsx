@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
 
-  const navItems = ["About", "Features", "Resources", "Pricing", "Testimonials", "FAQ"]
+  const navItems = ["About", "Features", "Coupons", "Testimonials", "FAQ"]
 
   // Animation Variants
   const containerVariants: Variants = {
@@ -75,7 +75,10 @@ const Navbar = () => {
           {navItems.map((item) => (
             <motion.a
               key={item}
-              href={item === "About" ? "/about-us" : `#${item.toLowerCase()}`}
+              href={
+                item === "About" ? "/about-us" :
+                `#${item.toLowerCase()}`
+              }
               variants={itemVariants}
               className="relative text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide py-2"
               whileHover={{ y: -2 }}

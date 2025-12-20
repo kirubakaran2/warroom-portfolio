@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { CouponCard } from "@/components/ui/coupon-card"
+import { Navbar } from "../Navbar"
 
 const coupons = [
   {
@@ -49,7 +50,9 @@ const item = {
 
 export default function CouponsPage() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-black text-white font-plusJakartaSans py-24">
+    <>
+      <Navbar />
+      <section className="relative w-full min-h-screen overflow-hidden bg-black text-white font-plusJakartaSans py-24">
       {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
@@ -113,5 +116,6 @@ export default function CouponsPage() {
         </motion.div>
       </div>
     </section>
+    </>
   )
 }

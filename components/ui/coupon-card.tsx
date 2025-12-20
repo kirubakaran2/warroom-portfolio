@@ -39,93 +39,85 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
     }
 
     return (
-      <motion.div
+      <div
         ref={ref}
         {...props}
-        whileHover={{ y: -6 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        className={`relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:border-white/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-all duration-300 ${className || ""}`}
+        className={`relative rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 ${className || ""}`}
       >
-        {/* Noise background */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:20px_20px]" />
-        {/* Subtle glass highlight */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
+        {/* Ribbon */}
+        <div className="absolute -right-2 -top-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded shadow">
+          SALE
+        </div>
 
-        <div className="relative z-10 p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-5">
-            <h3 className="text-lg font-semibold text-white tracking-tight">
-              {companyName}
-            </h3>
-
-            <motion.button
-              onClick={handleCopyCode}
-              whileTap={{ scale: 0.95 }}
-              className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium border backdrop-blur-md transition-colors ${
-                copied
-                  ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-400"
-                  : "border-white/15 bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
-              }`}
-            >
-              {copied ? (
-                <>
-                  <IconCheck size={16} /> Copied
-                </>
-              ) : (
-                <>
-                  <IconCopy size={16} /> Copy
-                </>
-              )}
-            </motion.button>
-          </div>
-
-          {/* Discount */}
-          <div className="mb-4">
-            <span className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold
-              bg-gradient-to-r from-indigo-400/20 to-cyan-400/20
-              text-indigo-200 border border-white/10">
+        <div className="p-6">
+          {/* Company & Discount */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+            <div>
+              <p className="text-sm text-gray-500 mb-1">Save at</p>
+              <h3 className="text-xl font-bold text-gray-900">{companyName}</h3>
+            </div>
+            <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-2xl px-4 py-2 rounded-lg">
               {discount}
-            </span>
-          </div>
-
-          {/* Coupon code */}
-          <div className="mb-4 rounded-lg border border-white/10 bg-black/30 px-4 py-3">
-            <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">
-              Coupon Code
-            </p>
-            <p className="font-mono text-white text-sm font-semibold select-all">
-              {couponCode}
-            </p>
+            </div>
           </div>
 
           {/* Description */}
           {description && (
-            <p className="mb-6 text-sm leading-relaxed text-gray-300">
+            <p className="text-gray-600 mb-6 pb-6 border-b border-gray-100">
               {description}
             </p>
           )}
 
-          {/* CTA */}
-          <motion.a
-            href={affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="
-              flex w-full items-center justify-center gap-2
-              rounded-xl px-5 py-3 text-sm font-semibold
-              bg-white/10 text-white
-              border border-white/15
-              hover:bg-white/20
-              transition-all
-            "
-          >
-            Get Deal
-            <IconExternalLink size={16} />
-          </motion.a>
+          {/* Coupon Code Section */}
+          <div className="mb-6">
+            <p className="text-sm text-gray-500 mb-2">Use this code at checkout:</p>
+            <div className="flex items-center gap-3">
+              <div className="flex-1 border-2 border-dashed border-gray-300 bg-gray-50 rounded-lg px-4 py-3">
+                <p className="font-mono text-lg font-bold text-gray-900 tracking-wider">
+                  {couponCode}
+                </p>
+              </div>
+              <button
+                onClick={handleCopyCode}
+                className={`flex items-center gap-2 rounded-lg px-4 py-3 font-medium transition-colors ${
+                  copied
+                    ? "bg-green-100 text-green-700 border border-green-200"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
+              >
+                {copied ? (
+                  <>
+                    <IconCheck size={18} />
+                    <span className="hidden sm:inline">Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <IconCopy size={18} />
+                    <span className="hidden sm:inline">Copy Code</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+            <div className="text-sm text-gray-500">
+              <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              Verified • Expires soon
+            </div>
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 text-white px-5 py-3 rounded-lg font-semibold hover:bg-black transition-colors"
+            >
+              Shop Now
+              <IconExternalLink size={18} />
+            </a>
+          </div>
         </div>
-      </motion.div>
+      </div>
     )
   }
 )

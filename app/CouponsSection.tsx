@@ -42,10 +42,20 @@ const item = {
 
 export default function CouponsSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white font-plusJakartaSans py-24">
-      {/* Background grid */}
+    <section id="coupons" className="relative w-full overflow-hidden bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white font-plusJakartaSans py-24">
+      {/* Animated background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 via-teal-600/10 to-cyan-600/10" />
+
+      {/* Floating geometric shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 left-1/5 w-72 h-72 bg-gradient-to-r from-emerald-400/20 to-teal-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-gradient-to-r from-teal-400/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
+      </div>
+
+      {/* Grid overlay with glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_70%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}

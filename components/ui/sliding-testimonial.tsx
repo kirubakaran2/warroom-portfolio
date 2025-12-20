@@ -98,7 +98,7 @@ const FUITestimonialWithSlide = () => {
     const [isPaused, setIsPaused] = useState(false);
     return (
 
-        <div ref={containerRef} className=" font-sanchez relative min-h-screen bg-black text-white font-space py-20 px-6 flex flex-col items-center gap-16 overflow-hidden">
+        <div id="testimonials" ref={containerRef} className=" font-sanchez relative min-h-screen bg-black text-white font-space py-20 px-6 flex flex-col items-center gap-16 overflow-hidden">
             <GridVignetteBackground />
             <div className="w-full mx-auto px-10 h-full flex flex-col justify-center">
                 <div className='mb-10'>

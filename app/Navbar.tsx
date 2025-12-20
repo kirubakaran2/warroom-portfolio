@@ -4,15 +4,26 @@ import * as React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence, type Variants } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
 import logo from "../public/warroom-logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
+  const pathname = usePathname()
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
 
   const navItems = ["About", "Features", "Coupons", "Testimonials", "FAQ"]
+
+  const getNavHref = (item: string) => {
+    if (item === "About") return "/about-us"
+    if (pathname === "/") {
+      return `#${item.toLowerCase()}`
+    } else {
+      return `/#${item.toLowerCase()}`
+    }
+  }
 
   // Animation Variants
   const containerVariants: Variants = {
@@ -41,21 +52,22 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 250, damping: 25 }}
       >
         {/* Logo */}
-        <motion.div
+        
+          <motion.div
           className="flex items-center gap-3 cursor-pointer select-none"
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-        >
-          <div className="relative flex items-center justify-center">
-            <motion.img
-              src={logo.src}
-              alt="Warroom Logo"
-              className="w-10 h-10 rounded-full border border-white/10 object-cover"
-              transition={{ duration: 0.7, ease: "easeInOut" }}
-            />
-            {/* Glow effect behind logo */}
-            <div className="absolute inset-0 bg-yellow-500/20 blur-lg rounded-full -z-10" />
-          </div>
+            onHoverStart={() => setIsHovered(true)}
+            onHoverEnd={() => setIsHovered(false)}
+          >
+            <div className="relative flex items-center justify-center">
+              <motion.img
+                src={logo.src}
+                alt="Warroom Logo"
+                className="w-10 h-10 rounded-full border border-white/10 object-cover"
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+              />
+              {/* Glow effect behind logo */}
+              <div className="absolute inset-0 bg-yellow-500/20 blur-lg rounded-full -z-10" />
+            </div>
           <motion.span
             className="text-white font-bold tracking-tight text-lg font-plusJakartaSans"
             initial={{ opacity: 0 }}
@@ -75,10 +87,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <motion.a
               key={item}
-              href={
-                item === "About" ? "/about-us" :
-                `#${item.toLowerCase()}`
-              }
+              href={getNavHref(item)}
               variants={itemVariants}
               className="relative text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide py-2"
               whileHover={{ y: -2 }}
@@ -101,7 +110,7 @@ const Navbar = () => {
           transition={{ duration: 0.4, delay: 0.25 }}
         >
           <a
-            href="#"
+            href="https://discord.com/invite/qnpfuETS"
             className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-black bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full hover:shadow-[0_0_20px_-5px_rgba(234,179,8,0.5)] transition-all duration-300 group overflow-hidden"
           >
             <span className="relative z-10">JOIN NOW</span>
@@ -150,7 +159,9 @@ const Navbar = () => {
                     alt="Warroom Logo"
                     className="w-8 h-8 rounded-full border border-white/10"
                   />
-                  <span className="font-bold tracking-tight">WARROOM</span>
+                  <a href="/">
+                    <span className="font-bold tracking-tight">WARROOM</span>
+                  </a>
                 </div>
                 <motion.button
                   onClick={toggleMenu}
@@ -174,8 +185,7 @@ const Navbar = () => {
                     key={item}
                     href={
                       item === "Home" ? "/" :
-                      item === "About" ? "/about-us" :
-                      `#${item.toLowerCase()}`
+                      getNavHref(item)
                     }
                     variants={itemVariants}
                     className="text-3xl font-bold text-white/90 hover:text-yellow-400 transition-colors flex items-center gap-4 group justify-start w-full"

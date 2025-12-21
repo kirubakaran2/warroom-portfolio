@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Warroom | Trade With Discipline. Win With Precision.",
   description:
-    "A refined trading mentorship built on clarity, discipline, and calm confidence."
+    "A refined trading mentorship built on clarity, discipline, and calm confidence.",
+  icons: {
+    icon: './favicon.png',
+  },
 }
 
 export default function RootLayout({

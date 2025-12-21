@@ -16,6 +16,18 @@ const faqs = [
   {
     question: "Can I trade any market?",
     answer: "The core system is built around NQ futures, but concepts apply to all markets."
+  },
+  {
+    question: "How long will it take to become consistent?",
+    answer: "Depends on discipline, but most traders improve in 4–8 weeks."
+  },
+  {
+    question: "Do you guarantee profits?",
+    answer: "No — trading involves risk. We teach you a system that improves your edge and discipline."
+  },
+  {
+    question: "Is there a refund?",
+    answer: "No refunds after course access is given."
   }
 ]
 

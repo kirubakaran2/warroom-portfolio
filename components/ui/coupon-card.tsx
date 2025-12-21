@@ -10,6 +10,7 @@ interface CouponCardProps {
   couponCode: string
   description?: string
   affiliateUrl: string
+  logoUrl?: string
   className?: string
 }
 
@@ -21,6 +22,7 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
       couponCode,
       description,
       affiliateUrl,
+      logoUrl,
       className,
       ...props
     },
@@ -52,9 +54,18 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
         <div className="p-6">
           {/* Company & Discount */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
-            <div>
-              <p className="text-sm text-gray-500 mb-1">Save at</p>
-              <h3 className="text-xl font-bold text-gray-900">{companyName}</h3>
+            <div className="flex items-center gap-3">
+              {logoUrl && (
+                <img
+                  src={logoUrl}
+                  alt={`${companyName} logo`}
+                  className="w-12 h-12 rounded-lg object-contain border border-gray-200"
+                />
+              )}
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Save at</p>
+                <h3 className="text-xl font-bold text-gray-900">{companyName}</h3>
+              </div>
             </div>
             <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-2xl px-4 py-2 rounded-lg">
               {discount}

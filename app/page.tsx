@@ -11,7 +11,7 @@ import CouponsSection from "./CouponsSection";
 import FAQSection from "./FAQSection";
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 overflow-x-hidden">
       {/* Global animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Large floating orbs */}
@@ -31,11 +31,11 @@ export default function Home() {
       <Navbar />
       <SectionOne />
       <About />
-      <Features />
+      <CouponsSection />
+      {/* <Features /> */}
       <WarroomDifference />
       <DefaultDemo />
       <GlassCard />
-      <CouponsSection />
       <FUITestimonialWithSlide />
       <FAQSection />
       <Footer />

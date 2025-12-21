@@ -188,7 +188,7 @@ export default function HeroOne() {
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]">
             {[
               <span key={0} className="inline-flex items-center justify-center">
-                Master the Markets.
+                Master the Markets
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={currentIconIndex}
@@ -220,8 +220,8 @@ export default function HeroOne() {
                   </motion.span>
                 </AnimatePresence>
               </span>,
-              "Build Discipline.",
-              "Trade Like a Professional."
+              "Build Discipline",
+              "Trade Like a Professional"
             ].map((txt, i) => (
               <motion.span
                 key={i}

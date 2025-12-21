@@ -45,9 +45,9 @@ const Navbar = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full py-4 md:py-6 px-4">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full py-4 md:py-6 px-4 overflow-hidden">
       <motion.div
-        className="flex items-center justify-between w-full max-w-6xl px-6 py-3 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full relative z-10 shadow-2xl shadow-black/50"
+        className="flex items-center justify-between w-full max-w-6xl px-4 md:px-6 py-3 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full relative z-10 shadow-2xl shadow-black/50"
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 250, damping: 25 }}
@@ -147,7 +147,7 @@ const Navbar = () => {
 
             {/* Panel */}
             <motion.aside
-              className="fixed right-0 top-0 bottom-0 w-full sm:w-80 bg-black/90 backdrop-blur-2xl border-l border-white/10 text-white z-50 p-6 shadow-2xl md:hidden flex flex-col"
+              className="fixed right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-black/95 backdrop-blur-2xl border-l border-white/10 text-white z-50 p-6 shadow-2xl md:hidden flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

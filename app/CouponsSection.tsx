@@ -9,21 +9,24 @@ const coupons = [
     discount: "80% OFF",
     couponCode: "FUTURE80",
     description: "Get 80% off on all trading courses and mentorship programs. Limited time offer!",
-    affiliateUrl: "https://example.com/futuretrade"
+    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    logoUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=120&h=120&fit=crop&crop=center"
   },
   {
     companyName: "PropMatrix",
     discount: "70% OFF",
     couponCode: "PROPMATRIX70",
     description: "Save big on prop firm challenges and funded accounts with this exclusive discount.",
-    affiliateUrl: "https://example.com/propmatrix"
+    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    logoUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&h=120&fit=crop&crop=center"
   },
   {
     companyName: "TradeMaster",
     discount: "60% OFF",
     couponCode: "TRADEMASTER60",
     description: "Comprehensive trading education platform with live mentorship and community access.",
-    affiliateUrl: "https://example.com/trademaster"
+    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    logoUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&h=120&fit=crop&crop=center"
   }
 ]
 
@@ -96,6 +99,7 @@ export default function CouponsSection() {
                 couponCode={coupon.couponCode}
                 description={coupon.description}
                 affiliateUrl={coupon.affiliateUrl}
+                logoUrl={coupon.logoUrl}
               />
             </motion.div>
           ))}

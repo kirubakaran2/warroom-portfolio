@@ -5,6 +5,7 @@ import { useState } from "react"
 import { motion, AnimatePresence, type Variants } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 import logo from "../public/warroom-logo.png"
 
 const Navbar = () => {
@@ -52,7 +53,7 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 250, damping: 25 }}
       >
         {/* Logo */}
-        
+        <Link href="/">
           <motion.div
           className="flex items-center gap-3 cursor-pointer select-none"
             onHoverStart={() => setIsHovered(true)}
@@ -76,6 +77,7 @@ const Navbar = () => {
             WARROOM
           </motion.span>
         </motion.div>
+        </Link>
 
         {/* Desktop Navigation */}
         <motion.nav
@@ -205,7 +207,7 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
               >
                 <a
-                  href="#"
+                  href="https://discord.com/invite/qnpfuETS"
                   className="block text-center py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold shadow-lg hover:shadow-orange-500/20 transition-all active:scale-95"
                   onClick={toggleMenu}
                 >

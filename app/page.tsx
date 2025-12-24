@@ -4,7 +4,7 @@ import Features from "./Features";
 import WarroomDifference from "./WarroomDifference";
 import { GlassCard } from "./components/ui/glass-card";
 import DefaultDemo from "./zoom-parallax-demo";
-import FUITestimonialWithSlide from "./testimonials";
+import Testimonials from "./testimonials";
 import SectionOne from "./SectionOne";
 import Footer from "./Footer";
 import CouponsSection from "./CouponsSection";
@@ -32,11 +32,11 @@ export default function Home() {
       <SectionOne />
       <About />
       <CouponsSection />
-      {/* <Features /> */}
+      <Features />
       <WarroomDifference />
       <DefaultDemo />
       <GlassCard />
-      <FUITestimonialWithSlide />
+      <Testimonials />
       <FAQSection />
       <Footer />
     </div>

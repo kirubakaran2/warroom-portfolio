@@ -101,6 +101,7 @@ export default function Features() {
 
                 {/* ---- Header ---- */}
                 <motion.div
+                    id="benefits"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"

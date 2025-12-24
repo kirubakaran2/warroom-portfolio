@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
 
-  const navItems = ["About", "Features", "Coupons", "Testimonials", "FAQ"]
+  const navItems = ["About", "Benefits", "Coupons", "Testimonials", "FAQ"]
 
   const getNavHref = (item: string) => {
     if (item === "About") return "/about-us"
@@ -47,7 +47,10 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full py-4 md:py-6 px-4 overflow-hidden">
       <motion.div
-        className="flex items-center justify-between w-full max-w-6xl px-4 md:px-6 py-3 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full relative z-10 shadow-2xl shadow-black/50"
+        className="flex items-center justify-between w-full max-w-6xl px-4 md:px-6 py-3 
+bg-black/70 backdrop-blur-xl border border-white/10 rounded-full relative z-10
+shadow-[0_10px_30px_-12px_rgba(255,255,255,0.12)]"
+
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 250, damping: 25 }}

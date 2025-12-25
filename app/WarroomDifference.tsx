@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { TrendingUp, Users, MessageSquare, Zap, Award, Target } from "lucide-react"
+import { IconCalendar } from "@tabler/icons-react"
 
 const benefits = [
   {
@@ -12,10 +13,10 @@ const benefits = [
     color: "from-blue-500/20 to-purple-500/20"
   },
   {
-    title: "Live Trading Sessions",
-    description: "Real-time Zoom sessions where we analyze, trade, and review together. See professional execution in action.",
-    icon: <Users className="w-8 h-8 text-green-400" />,
-    color: "from-green-500/20 to-teal-500/20"
+    title: "Weekend Doubt Sessions",
+    description: "Special sessions for working professionals to clarify concepts and stay consistent. No question left unanswered.",
+     icon: <IconCalendar className="w-8 h-8 text-blue-400" />,
+        color: "from-blue-400/20 to-blue-600/5",
   },
   {
     title: "Personal 1:1 Mentorship",
@@ -66,12 +67,19 @@ const item = {
 
 export default function WarroomDifference() {
   return (
-    <section className="w-full bg-black py-20">
+    <section className="w-full bg-black text-white py-20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Why Serious Traders Choose Warroom</h2>
-          <p className="text-gray-300 text-lg">Built for traders who want consistency, clarity, and capital</p>
-        </div>
+<motion.div
+                        variants={item}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                            What Makes <span className="text-yellow-400">Warroom</span> Different?
+                        </h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto">
+                            Live mentorship, real‑time market analysis, weekly challenges, and a holistic approach to trading, health, and mindset.
+                        </p>
+                    </motion.div>
         <motion.div
           variants={container}
           initial="hidden"
@@ -96,6 +104,17 @@ export default function WarroomDifference() {
             </motion.div>
           ))}
         </motion.div>
+        <motion.div
+                    variants={item}
+                    className="text-center mt-12"
+                >
+                    <a
+                        href="https://discord.com/invite/qnpfuETS"
+                        className="inline-block px-10 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        Join Warroom Today
+                    </a>
+                </motion.div>
       </div>
     </section>
   )

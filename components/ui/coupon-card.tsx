@@ -73,11 +73,12 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
           </div>
 
           {/* Description */}
-          {description && (
-            <p className="text-gray-600 mb-6 pb-6 border-b border-gray-100">
-              {description}
-            </p>
-          )}
+{description && (
+  <p className="text-gray-600 mb-6 pb-6 border-b border-gray-100 whitespace-pre-line leading-relaxed">
+    {description}
+  </p>
+)}
+
 
           {/* Coupon Code Section */}
           <div className="mb-6">
@@ -123,7 +124,7 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gray-900 text-white px-5 py-3 rounded-lg font-semibold hover:bg-black transition-colors"
             >
-              Shop Now
+              Claim Now
               <IconExternalLink size={18} />
             </a>
           </div>

@@ -221,7 +221,6 @@ export default function HeroOne() {
                 </AnimatePresence>
               </span>,
               "Build Discipline",
-              "Trade Like a Professional"
             ].map((txt, i) => (
               <motion.span
                 key={i}
@@ -263,7 +262,7 @@ export default function HeroOne() {
         >
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="#join"
+            href="https://forms.gle/gLG6HF2XfUkoB83MA"
             className="px-6 sm:px-8 py-3 bg-yellow-400 text-black font-bold rounded-full text-center text-sm sm:text-base"
           >
             Join Now

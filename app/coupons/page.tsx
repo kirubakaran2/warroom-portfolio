@@ -5,34 +5,47 @@ import { CouponCard } from "@/components/ui/coupon-card"
 import { Navbar } from "../Navbar"
 
 const coupons = [
-  {
-    companyName: "FutureTrade",
-    discount: "80% OFF",
-    couponCode: "FUTURE80",
-    description: "Get 80% off on all trading courses and mentorship programs. Limited time offer!",
-    affiliateUrl: "https://example.com/futuretrade"
+ {
+    companyName: "5%ers",
+    discount: "10% OFF",
+    couponCode: "COMMING SOON",
+    description: `Manage Up to $4M
+10% OFF only First Purchase
+Get 5k Account only for 39$`,
+    affiliateUrl: "https://www.the5ers.com/?afmc=kll",
+    logoUrl: "/5ers.jpg"
   },
   {
-    companyName: "PropMatrix",
-    discount: "70% OFF",
-    couponCode: "PROPMATRIX70",
-    description: "Save big on prop firm challenges and funded accounts with this exclusive discount.",
-    affiliateUrl: "https://example.com/propmatrix"
-  },
-  {
-    companyName: "TradeMaster",
+    companyName: "Blue Guardian Futures",
     discount: "60% OFF",
-    couponCode: "TRADEMASTER60",
-    description: "Comprehensive trading education platform with live mentorship and community access.",
-    affiliateUrl: "https://example.com/trademaster"
+    couponCode: "FUTURE80",
+    description: "Futures, Commodities\nMax Allocation 450k",
+    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    logoUrl: "/bluee.jpg"
   },
   {
-    companyName: "ForexElite",
-    discount: "75% OFF",
-    couponCode: "FOREXELITE75",
-    description: "Premium forex trading tools and indicators at unbeatable prices.",
-    affiliateUrl: "https://example.com/forexelite"
-  }
+    companyName: "Funding Ticks",
+    discount: "35% OFF",
+    couponCode: "FUNDINGTICKS70",
+    description: "Save big on prop firm challenges and funded accounts with this exclusive discount.",
+    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    logoUrl: "/tradif.png"
+  },
+  {
+    companyName: "FXReplay",
+    discount: "15% OFF",
+    couponCode: "FXREPLAY15",
+    description: "15% off on trading analysis and educational tools.",
+    affiliateUrl: "https://www.fxreplay.com/",
+    logoUrl: "/fxreplay.jpg"
+  },
+  {
+    companyName: "Tradezella",
+    discount: "20% OFF",
+    couponCode: "DINESH20",
+    description: "20% off on trading journal and analytics tools.",
+    affiliateUrl: "https://tradezella.com?fpr=dinesh",
+  },
 ]
 
 const container = {

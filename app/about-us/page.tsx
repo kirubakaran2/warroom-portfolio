@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import { motion } from "framer-motion";
 import { IoCompass } from "react-icons/io5";
 import { FiTarget } from "react-icons/fi";
-import mentorImage from "../mentor.png";
+import mentorImage from "../mentor2.png";
 
 export default function AboutUsPage() {
   return (
@@ -18,45 +18,7 @@ export default function AboutUsPage() {
         <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-24 pb-20">
           <div className="max-w-6xl mx-auto">
             {/* Mission & Vision Section */}
-            <div className="grid md:grid-cols-2 gap-8 mb-20">
-              {/* Mission */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group"
-              >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 backdrop-blur-sm mb-6">
-                  <IoCompass className="text-yellow-400 text-lg" />
-                  <span className="text-xs font-mono font-bold text-yellow-400 tracking-widest uppercase">
-                    OUR MISSION
-                  </span>
-                </div>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                  To build disciplined, consistent traders who understand the market's structure, manage risk with confidence, and execute with clarity.
-                </p>
-                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
-              </motion.div>
-
-              {/* Vision */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group"
-              >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 backdrop-blur-sm mb-6">
-                  <FiTarget className="text-yellow-400 text-lg" />
-                  <span className="text-xs font-mono font-bold text-yellow-400 tracking-widest uppercase">
-                    OUR VISION
-                  </span>
-                </div>
-                <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                  A world where traders don't gamble — they follow a structured plan, trade smart, and build real financial freedom.
-                </p>
-                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
-              </motion.div>
-            </div>
+           
 
             {/* Meet the Founder Section */}
             <motion.div
@@ -103,7 +65,7 @@ export default function AboutUsPage() {
                     </p>
 
                     <div className="pt-4 border-t border-white/10">
-                      <p className="font-bitcount text-white">
+                      <p className="font-Sanchez text-white">
                         At Warroom, we strip away the noise and focus on what actually matters: <span className="text-yellow-400">strategy</span>, <span className="text-yellow-400">execution</span>, and <span className="text-yellow-400">mindset</span>.
                       </p>
                     </div>
@@ -113,6 +75,45 @@ export default function AboutUsPage() {
                 <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
               </div>
             </motion.div>
+             <div className="grid md:grid-cols-2 gap-8 mb-20">
+              {/* Mission */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group"
+              >
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 backdrop-blur-sm mb-6">
+                  <IoCompass className="text-yellow-400 text-lg" />
+                  <span className="text-xs font-mono font-bold text-yellow-400 tracking-widest uppercase">
+                    OUR MISSION
+                  </span>
+                </div>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+                  To build disciplined, consistent traders who understand the market's structure, manage risk with confidence, and execute with clarity.
+                </p>
+                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
+              </motion.div>
+
+              {/* Vision */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group"
+              >
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 backdrop-blur-sm mb-6">
+                  <FiTarget className="text-yellow-400 text-lg" />
+                  <span className="text-xs font-mono font-bold text-yellow-400 tracking-widest uppercase">
+                    OUR VISION
+                  </span>
+                </div>
+                <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+                  A world where traders don't gamble, they follow a structured plan, trade smart, and build real financial freedom.
+                </p>
+                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
+              </motion.div>
+            </div>
 
             {/* Stats Boxes */}
             <motion.div
@@ -124,7 +125,7 @@ export default function AboutUsPage() {
                 {/* Statistic 1 */}
                 <div className="relative p-6 rounded-xl bg-gradient-to-br from-yellow-500/10 to-transparent border border-yellow-500/20 backdrop-blur-sm text-center group">
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 font-bitcount">
-                    150+
+                    50+
                   </div>
                   <div className="text-sm md:text-base text-gray-300 font-bold tracking-widest uppercase">
                     Traders Mentored

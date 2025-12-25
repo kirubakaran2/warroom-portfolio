@@ -16,58 +16,58 @@ import emoji9 from './genmoji3.jpeg'
 
 const testimonials = [
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "Proud to be part of War Room. Mentor Dinesh transformed my trading mindset through clear structure, discipline and patience. His constant support, precise outlooks and practical guidance built confidence, consistency, and professional market understanding quickly.",
     image: emoji1,
-    name: "Briana Patton",
-    role: "Operations Manager",
+    name: "Sudhagar",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "Excellent ICT mentorship with simple explanations of market structure, liquidity and institutional concepts. Real-time chart examples and proper risk management guidance helped me trade confidently, avoid mistakes, and follow disciplined entries with clear confirmations.",
     image: emoji2,
-    name: "Bilal Ahmed",
-    role: "IT Manager",
+    name: "Saswath",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "After years of losses and failed mentorships, War Room finally changed everything. I can now read price clearly, trade without fear, follow rules properly, manage risk confidently, and finally feel consistent and profitable with discipline.",
     image: emoji3,
-    name: "Saman Malik",
-    role: "Customer Support Lead",
+    name: "Michael",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "Received my first prop firm payout with Dinesh's guidance. War Room replaced my FOMO trading with confirmation-based entries, emotional control and proper risk management. His beginner-friendly teaching style improved confidence, clarity and consistent execution greatly.",
     image: emoji4,
-    name: "Omar Raza",
-    role: "CEO",
+    name: "Karthik",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "After blowing more than fifteen accounts, I joined War Room mentorship and passed my prop challenge within ten days. Clear daily setups, structured plans and disciplined execution helped me achieve payout and regain complete trading confidence.",
     image: emoji5,
-    name: "Zainab Hussain",
-    role: "Project Manager",
+    name: "Sudhagar",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "Cleared Phase Two for the first time after joining War Room. Dinesh's positive words, structured guidance and confidence building approach removed fear, reduced frustration, improved execution, and helped me trade calmly with discipline.",
     image: emoji6,
-    name: "Aliza Khan",
-    role: "Business Analyst",
+    name: "Rohith",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "War Room mentors guide students properly through structured learning, practical execution and disciplined chart reading. Real growth happens when you apply lessons alone, observe price behavior clearly, build personal edge, and trade confidently.",
     image: emoji7,
-    name: "Farhan Siddiqui",
-    role: "Marketing Director",
+    name: "Sheninsha",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "More than a course, War Room is life-changing mentorship. Daily continuation setups, constant monitoring, personal guidance, weekly reviews and supportive community helped students achieve funded certificates, payouts, confidence, and consistent disciplined trading performance.",
     image: emoji8,
-    name: "Sana Sheikh",
-    role: "Sales Manager",
+    name: "Hariharan",
+    role: "War Room Student",
   },
   {
-    text: "Guys, you have great mentors — make maximum use of that, learn from them, apply to the chart; only they guide you properly, the real learning occurs when you see in the chart what they taught will happen when you are alone — build an edge in that. 😊",
+    text: "War Room mentorship gave me complete clarity in trading. Structured outlooks, student discussions, mentor guidance and disciplined execution improved my mindset, confidence, risk management and overall consistency. Joining was the best decision.",
     image: emoji9,
-    name: "Hassan Ali",
-    role: "E-commerce Manager",
+    name: "Pavan",
+    role: "War Room Student",
   },
 ];
 
@@ -89,8 +89,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
         >
-          <div className="flex justify-center text-white/90 mt-20">
-            <div className="border py-1 px-4 rounded-lg">Testimonials</div>
+          <div className="flex justify-center mt-20">
+            <div className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-400 py-2 px-6 rounded-full font-medium text-sm tracking-wider uppercase shadow-lg backdrop-blur-sm">
+              Testimonials
+            </div>
           </div>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight mt-5 text-center

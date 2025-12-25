@@ -36,6 +36,28 @@ export default function About() {
                             Dinesh
                         </h3>
                     </motion.div>
+                    {/* YouTube Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7 }}
+                        className="mb-16"
+                    >
+                        <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+                            <div className="relative pb-[56.25%] h-0">
+                                <iframe
+                                    className="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed?listType=playlist&list=UUoQnDTfZkd-yGVkxQuu7_Kw"
+                                    title="Warroom Live Sessions"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+
 
                     {/* Content Card */}
                     <motion.div
@@ -71,7 +93,7 @@ export default function About() {
                                 </p>
 
                                 <div className="pt-4 border-t border-white/10">
-                                    <p className="font-bitcount text-white text-center md:text-left">
+                                    <p className="font-Sanchez text-white text-center md:text-left">
                                         Here, trading isn’t a gamble — it’s a skill you master, step by step, with <span className="text-yellow-500">clarity</span>, <span className="text-yellow-500">focus</span>, and <span className="text-yellow-500">consistency</span>.
                                     </p>
                                 </div>

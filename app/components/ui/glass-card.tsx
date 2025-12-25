@@ -117,9 +117,6 @@ export const GlassCard = () => {
           <div className="relative z-20 w-full">
             <Ticket />
           </div>
-
-          {/* Animated bottom line */}
-          <div className="w-full max-w-3xl h-[2px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mt-4 animate-pulse"></div>
         </div>
       </div>
     </div>

@@ -269,7 +269,7 @@ export default function HeroOne() {
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="#discounts"
+            href="#coupons"
             className="px-6 sm:px-8 py-3 bg-transparent border border-white text-white font-bold rounded-full text-center text-sm sm:text-base"
           >
             Claim Discounts

@@ -214,14 +214,10 @@ shadow-[0_10px_30px_-12px_rgba(255,255,255,0.12)]"
                   className="block text-center py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold shadow-lg hover:shadow-orange-500/20 transition-all active:scale-95"
                   onClick={toggleMenu}
                 >
-                  GET STARTED
+                  JOIN NOW
                 </a>
 
-                <div className="mt-6 text-center">
-                  <p className="text-xs text-white/30 font-mono">
-                    SECURE CONNECTION ESTABLISHED
-                  </p>
-                </div>
+
               </motion.div>
             </motion.aside>
           </>

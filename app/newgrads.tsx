@@ -252,7 +252,7 @@ export default function Hero({
   title,
   description,
   ctaButtons = [
-    { text: "Get started", href: "#get-started", primary: true },
+    { text: "JOIN NOW", href: "#get-started", primary: true },
     { text: "View showcase", href: "#showcase" }
   ],
   badgeText = "Generative Surfaces",

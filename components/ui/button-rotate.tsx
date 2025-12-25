@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 export const Component = ({ onClick }: { onClick?: () => void }) => {
-  const text = "GET STARTED";
+  const text = "JOINED NOW ";
 
   return (
     <div className="border p-1 rounded-full border-dotted border-primary">

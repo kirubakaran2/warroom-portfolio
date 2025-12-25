@@ -2,16 +2,16 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-black text-white py-10 px-4">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold mb-8 text-center">Terms & Conditions – Warroom Trading Mentorship</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center">Terms & Conditions – WarRoom Trading Mentorship</h1>
         <p className="mb-4">Last Updated: 2025</p>
         <p className="mb-6">
-          Welcome to Warroom Trading Mentorship ("Warroom", "we", "our", "the program").
+          Welcome to WarRoom Trading Mentorship ("WarRoom", "we", "our", "the program").
           By purchasing, accessing, or using our mentorship, community, website, or any educational materials, you agree to the following Terms & Conditions.
         </p>
 
         <h2 className="text-xl font-semibold mb-4 mt-8">1. Educational Purpose Only</h2>
         <p className="mb-4">
-          All content, course materials, live sessions, trade breakdowns, and guidance provided by Warroom are strictly for educational purposes.
+          All content, course materials, live sessions, trade breakdowns, and guidance provided by WarRoom are strictly for educational purposes.
         </p>
         <p className="mb-4">We do not provide:</p>
         <ul className="list-disc list-inside mb-4 ml-4">
@@ -30,7 +30,7 @@ export default function TermsPage() {
           Trading involves risk.
           Past results (including payouts, funded accounts, student testimonials) do not guarantee future performance.
         </p>
-        <p className="mb-4">By joining Warroom, you acknowledge that:</p>
+        <p className="mb-4">By joining WarRoom, you acknowledge that:</p>
         <ul className="list-disc list-inside mb-4 ml-4">
           <li>You may lose money in trading</li>
           <li>Results vary based on discipline, effort, psychology, and market conditions</li>
@@ -52,12 +52,12 @@ export default function TermsPage() {
           Sharing, reselling, or distributing course content is strictly prohibited.
         </p>
         <p className="mb-4">
-          Any misuse can result in immediate removal from Warroom without refund.
+          Any misuse can result in immediate removal from WarRoom without refund.
         </p>
 
         <h2 className="text-xl font-semibold mb-4 mt-8">4. Intellectual Property</h2>
         <p className="mb-4">
-          All course materials, strategies, PDFs, live recordings, videos, and community content remain the intellectual property of Warroom.
+          All course materials, strategies, PDFs, live recordings, videos, and community content remain the intellectual property of WarRoom.
         </p>
         <p className="mb-4">You may not:</p>
         <ul className="list-disc list-inside mb-4 ml-4">

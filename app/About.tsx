@@ -33,7 +33,7 @@ export default function About() {
                             The Trader Behind <span className="text-yellow-500">Warroom</span>?
                         </h2>
                         <h3 className="text-xl md:text-2xl text-gray-400 font-bitcount">
-                            Dinesh
+                            ICT_Dinesh
                         </h3>
                     </motion.div>
                     {/* Content Card */}
@@ -71,7 +71,7 @@ export default function About() {
 
                                 <div className="pt-4 border-t border-white/10">
                                     <p className="font-Sanchez text-white text-center md:text-left">
-                                        Here, trading isn’t a gamble — it’s a skill you master, step by step, with <span className="text-yellow-500">clarity</span>, <span className="text-yellow-500">focus</span>, and <span className="text-yellow-500">consistency</span>.
+                                        Here, trading isn’t a gamble, it’s a skill you master, step by step, with <span className="text-yellow-500">clarity</span>, <span className="text-yellow-500">focus</span>, and <span className="text-yellow-500">consistency</span>.
                                     </p>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ export default function About() {
                                 <iframe
                                     className="absolute top-0 left-0 w-full h-full"
                                     src="https://www.youtube.com/embed?listType=playlist&list=UUoQnDTfZkd-yGVkxQuu7_Kw"
-                                    title="Warroom Live Sessions"
+                                    title="WarRoom Live Sessions"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen

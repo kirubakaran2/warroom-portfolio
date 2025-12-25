@@ -3,12 +3,13 @@
 import { motion } from "framer-motion"
 import { CouponCard } from "@/components/ui/coupon-card"
 import { Navbar } from "../Navbar"
+import CustomCursor from "../components/customcursor"
 
 const coupons = [
- {
+   {
     companyName: "5%ers",
     discount: "10% OFF",
-    couponCode: "COMMING SOON",
+    couponCode: "DINESH",
     description: `Manage Up to $4M
 10% OFF only First Purchase
 Get 5k Account only for 39$`,
@@ -16,35 +17,44 @@ Get 5k Account only for 39$`,
     logoUrl: "/5ers.jpg"
   },
   {
-    companyName: "Blue Guardian Futures",
+    companyName: "BGF Futures",
     discount: "60% OFF",
-    couponCode: "FUTURE80",
-    description: "Futures, Commodities\nMax Allocation 450k",
-    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    couponCode: "DINESH",
+        description: `Max Allocation $450K
+    Tradovate, Volsys
+Weekly Payouts | No activation Fee`,
+    affiliateUrl: "https://checkout.blueguardianfutures.com/ref/63/",
     logoUrl: "/bluee.jpg"
   },
   {
     companyName: "Funding Ticks",
     discount: "35% OFF",
-    couponCode: "FUNDINGTICKS70",
-    description: "Save big on prop firm challenges and funded accounts with this exclusive discount.",
-    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
-    logoUrl: "/tradif.png"
+    couponCode: "DINESH",
+    description: `Max Allocation $300K
+    Tradovate, NinjaTrader
+Up to 40% OFF All Evaluations`,
+    affiliateUrl: "https://app.fundingticks.com/register?ref=DINESH",
+    logoUrl: "/tradify.png"
   },
   {
     companyName: "FXReplay",
     discount: "15% OFF",
     couponCode: "FXREPLAY15",
-    description: "15% off on trading analysis and educational tools.",
-    affiliateUrl: "https://www.fxreplay.com/",
+    description: `Replay historical market conditions
+Backtest & practice like live markets
+Learn faster with realistic trade simulations`,
+    affiliateUrl: "https://fxreplay.com/?via=ictdinesh",
     logoUrl: "/fxreplay.jpg"
   },
   {
     companyName: "Tradezella",
     discount: "20% OFF",
     couponCode: "DINESH20",
-    description: "20% off on trading journal and analytics tools.",
+    description: `Smart trading journal & performance analytics
+Track edge, mistakes & consistency
+Improve discipline with real data insights`,
     affiliateUrl: "https://tradezella.com?fpr=dinesh",
+    logoUrl: "/tradezella.png"
   },
 ]
 
@@ -65,7 +75,10 @@ export default function CouponsPage() {
   return (
     <>
       <Navbar />
-      <section className="relative w-full min-h-screen overflow-hidden bg-black text-white font-plusJakartaSans py-24">
+      <section className="relative w-full min-h-screen overflow-hidden bg-black text-white font-plusJakartaSans py-29">
+         <div className="hidden md:block">
+                <CustomCursor hoverActive />
+              </div>
       {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
@@ -88,7 +101,7 @@ export default function CouponsPage() {
             variants={item}
             className="text-xl text-gray-300"
           >
-            Save big on premium trading tools, courses, and prop firm challenges with our exclusive coupon codes
+            Save big on premium trading tools and prop firm challenges with my exclusive coupon codes.
           </motion.p>
         </motion.div>
 
@@ -107,6 +120,7 @@ export default function CouponsPage() {
                 couponCode={coupon.couponCode}
                 description={coupon.description}
                 affiliateUrl={coupon.affiliateUrl}
+                logoUrl={coupon.logoUrl}
               />
             </motion.div>
           ))}

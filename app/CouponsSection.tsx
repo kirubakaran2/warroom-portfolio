@@ -7,7 +7,7 @@ const coupons = [
   {
     companyName: "5%ers",
     discount: "10% OFF",
-    couponCode: "COMMING SOON",
+    couponCode: "DINESH",
     description: `Manage Up to $4M
 10% OFF only First Purchase
 Get 5k Account only for 39$`,
@@ -15,20 +15,24 @@ Get 5k Account only for 39$`,
     logoUrl: "/5ers.jpg"
   },
   {
-    companyName: "Blue Guardian Futures",
+    companyName: "BGF Futures",
     discount: "60% OFF",
-    couponCode: "FUTURE80",
-    description: "Futures, Commodities\nMax Allocation 450k",
-    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
+    couponCode: "DINESH",
+        description: `Max Allocation $450K
+    Tradovate, Volsys
+Weekly Payouts | No activation Fee`,
+    affiliateUrl: "https://checkout.blueguardianfutures.com/ref/63/",
     logoUrl: "/bluee.jpg"
   },
   {
     companyName: "Funding Ticks",
     discount: "35% OFF",
-    couponCode: "FUNDINGTICKS70",
-    description: "Save big on prop firm challenges and funded accounts with this exclusive discount.",
-    affiliateUrl: "https://nononsensetrader.com/%F0%9F%8E%AF-how-to-beat-the-5ers-bootcamp-with-strategyquant-x-and-become-a-4m-robot-wielding-legend/",
-    logoUrl: "/tradif.png"
+    couponCode: "DINESH",
+    description: `Max Allocation $300K
+    Tradovate, NinjaTrader
+Up to 40% OFF All Evaluations`,
+    affiliateUrl: "https://app.fundingticks.com/register?ref=DINESH",
+    logoUrl: "/tradify.png"
   },
 ]
 
@@ -75,7 +79,7 @@ export default function CouponsSection() {
             variants={item}
             className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 mb-6"
           >
-            Exclusive Trading Deals
+            Exclusive Prop Firm Deals
           </motion.h2>
           <motion.p
             variants={item}

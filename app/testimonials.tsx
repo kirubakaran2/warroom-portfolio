@@ -96,12 +96,12 @@ const Testimonials = () => {
           </div>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight mt-5 text-center
-bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]">
-            What our users say
+bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,255,255,0.25)] white-space">
+            Heartfull words from WarRoom Members
           </h2>
 
           <p className="text-center mt-5 opacity-75 font-medium text-white/80">
-            See what our customers have to say about us.
+            See what our traders have to say about us.
           </p>
         </motion.div>
 

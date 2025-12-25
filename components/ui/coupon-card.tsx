@@ -116,7 +116,7 @@ export const CouponCard = React.forwardRef<HTMLDivElement, CouponCardProps>(
           <div className="flex items-center justify-between pt-6 border-t border-gray-100">
             <div className="text-sm text-gray-500">
               <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Verified • Expires soon
+              Verified
             </div>
             <a
               href={affiliateUrl}

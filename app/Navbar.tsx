@@ -19,6 +19,7 @@ const Navbar = () => {
 
   const getNavHref = (item: string) => {
     if (item === "About") return "/about-us"
+    if (item === "Coupons") return "/coupons"
     if (pathname === "/") {
       return `#${item.toLowerCase()}`
     } else {

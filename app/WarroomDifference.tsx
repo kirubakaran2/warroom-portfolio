@@ -74,7 +74,7 @@ export default function WarroomDifference() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                            What Makes <span className="text-yellow-400">Warroom</span> Different?
+                            What Makes <span className="text-yellow-400">WarRoom</span> Different?
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto">
                             Live mentorship, real‑time market analysis, weekly challenges, and a holistic approach to trading, health, and mindset.

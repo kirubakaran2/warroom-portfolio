@@ -197,21 +197,16 @@ export default function HeroOne() {
                       opacity: 1,
                       scale: 1,
                       rotate: 0,
-                      y: [0, -3, 0]
+                      y: [0, -2, 0]
                     }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.8,
-                      rotate: 180,
-                      y: [0, 3, 0]
-                    }}
+                    
                     transition={{
                       opacity: { duration: 0.5 },
                       scale: { duration: 0.5 },
                       rotate: { duration: 0.5 },
                       y: { duration: 1.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
                     }}
-                    className="ml-4"
+                    className="ml-2"
                   >
                     {(() => {
                       const IconComponent = tradingIcons[currentIconIndex].icon
@@ -248,7 +243,7 @@ export default function HeroOne() {
           className="mt-2 md:mt-4 text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-center max-w-2xl px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 2, duration: 1 }}
         >
           Join the <em>Warroom</em> — a private, elite mentorship designed to turn inconsistent traders into confident, rule-based performers.
         </motion.p>
@@ -258,7 +253,7 @@ export default function HeroOne() {
           className="flex flex-col sm:flex-row gap-4 justify-center mt-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.5, duration: 0.8 }}
+          transition={{ delay: 3, duration: 0.8 }}
         >
           <motion.a
             whileHover={{ scale: 1.05 }}

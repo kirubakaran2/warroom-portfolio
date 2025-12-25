@@ -6,12 +6,16 @@ import { motion } from "framer-motion";
 import { IoCompass } from "react-icons/io5";
 import { FiTarget } from "react-icons/fi";
 import mentorImage from "../mentor2.png";
+import CustomCursor from "../components/customcursor";
 
 export default function AboutUsPage() {
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
+         <div className="hidden md:block">
+                <CustomCursor hoverActive />
+              </div>
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(234,179,8,0.05)_0%,transparent_70%)]" />
 
@@ -27,24 +31,24 @@ export default function AboutUsPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-20"
             >
-              <div className="text-center mb-12">
+              <div className="text-center mb-12 mt-9">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/30 bg-yellow-500/10 backdrop-blur-sm mb-6">
                   <span className="text-xs font-mono font-bold text-yellow-400 tracking-widest uppercase">
                     MEET THE FOUNDER
                   </span>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-                  The Man Behind <span className="text-yellow-500">Warroom</span>
+                  The Man Behind <span className="text-yellow-500">WarRoom</span>
                 </h1>
               </div>
 
               <div className="relative p-8 md:p-12 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden group">
                 <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
                   {/* Image Section */}
-                  <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden border border-white/10 shadow-2xl grayscale">
+                  <div className="relative aspect-square md:aspect-[5/5] rounded-xl overflow-hidden border border-white/10 shadow-2xl grayscale">
                     <img
                       src={mentorImage.src}
-                      alt="Dinesh - Trader, Educator, and Founder of Warroom"
+                      alt="Dinesh - Trader, Educator, and Founder of WarRoom"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 filter contrast-125"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -53,7 +57,7 @@ export default function AboutUsPage() {
                   {/* Story Section */}
                   <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
                     <p>
-                      I'm <span className="text-white font-bold">Dinesh</span> — Trader, Educator, and Founder of Warroom.
+                      I'm <span className="text-white font-bold">Dinesh</span> — Trader, Educator, and Founder of WarRoom.
                     </p>
 
                     <p>
@@ -66,7 +70,7 @@ export default function AboutUsPage() {
 
                     <div className="pt-4 border-t border-white/10">
                       <p className="font-Sanchez text-white">
-                        At Warroom, we strip away the noise and focus on what actually matters: <span className="text-yellow-400">strategy</span>, <span className="text-yellow-400">execution</span>, and <span className="text-yellow-400">mindset</span>.
+                        At WarRoom, we strip away the noise and focus on what actually matters: <span className="text-yellow-400">strategy</span>, <span className="text-yellow-400">execution</span>, and <span className="text-yellow-400">mindset</span>.
                       </p>
                     </div>
                   </div>

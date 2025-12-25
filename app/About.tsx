@@ -36,29 +36,6 @@ export default function About() {
                             Dinesh
                         </h3>
                     </motion.div>
-                    {/* YouTube Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        className="mb-16"
-                    >
-                        <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-xl">
-                            <div className="relative pb-[56.25%] h-0">
-                                <iframe
-                                    className="absolute top-0 left-0 w-full h-full"
-                                    src="https://www.youtube.com/embed?listType=playlist&list=UUoQnDTfZkd-yGVkxQuu7_Kw"
-                                    title="Warroom Live Sessions"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen
-                                />
-                            </div>
-                        </div>
-                    </motion.div>
-
-
                     {/* Content Card */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -102,6 +79,26 @@ export default function About() {
 
                         {/* Subtle glow effect */}
                         <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7 }}
+                        className="mb-16 mt-12"
+                    >
+                        <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+                            <div className="relative pb-[56.25%] h-0">
+                                <iframe
+                                    className="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed?listType=playlist&list=UUoQnDTfZkd-yGVkxQuu7_Kw"
+                                    title="Warroom Live Sessions"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </div>
                     </motion.div>
 
                 </div>

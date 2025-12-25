@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Target, Lock, Unlock, Award, TrendingUp, Shield, Zap, BarChart3, Clock, Users } from 'lucide-react';
+import { Target, Lock, Unlock, UserPlus, TrendingUp, Shield, Zap, BarChart3, Clock, Users } from 'lucide-react';
 
 const Ticket: React.FC = () => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
@@ -69,7 +69,7 @@ const Ticket: React.FC = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-none">
-              <span className="block text-white">NQ Futures</span>
+              <span className="block text-white">1-1</span>
               <span className="block bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent">
                 Mentorship
               </span>
@@ -93,15 +93,14 @@ const Ticket: React.FC = () => {
               <div className="grid md:grid-cols-2">
                 {/* Left Side */}
                 <div className="bg-gradient-to-br from-amber-600 via-orange-600 to-amber-700 p-12 flex flex-col justify-center">
-                  <Award className="w-16 h-16 text-white mb-6" />
+                  <UserPlus className="w-16 h-16 text-white mb-6" />
                   <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    Lifetime Membership
+                    Lifetime Access
                   </h3>
                   <p className="text-white/90 text-lg mb-8">
-                    One payment. Forever access. Professional trading education.
-                  </p>
+                   Welcome to your trading transformation. Learn real market skills, gain deep insights, and build unshakable confidence to trade smarter, manage risk better, and win consistently in any market condition.  </p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-6xl font-bold text-white">₹XX,XXX</span>
+                    <span className="text-6xl font-bold text-white">₹50,000</span>
                   </div>
                 </div>
 
@@ -109,11 +108,11 @@ const Ticket: React.FC = () => {
                 <div className="bg-zinc-950 p-12">
                   <div className="space-y-6 mb-10">
                     {[
-                      "Complete Trading System",
-                      "6 Months Daily Sessions",
+                      "ICT Basic To Advance",
+                      "Guidance To Profitable Trading",
+                      "Private Community Discord Access",
+                      "Class Recordings",
                       "Weekly Reviews & Feedback",
-                      "Risk Management Tools",
-                      "Private Community Access",
                       "All Future Updates"
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-4 group">
@@ -135,10 +134,6 @@ const Ticket: React.FC = () => {
                   >
                     Enroll Now
                   </a>
-
-                  <p className="text-zinc-600 text-center text-sm mt-6">
-                    Limited to 25 participants • Next cohort: [Date]
-                  </p>
                 </div>
               </div>
             </div>

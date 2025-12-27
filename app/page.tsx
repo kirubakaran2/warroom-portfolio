@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import CouponsSection from "./CouponsSection";
 import FAQSection from "./FAQSection";
 import Ticket from "./ticket";
+import Cert from "./cert";
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 overflow-x-hidden">
@@ -34,9 +35,11 @@ export default function Home() {
       <CouponsSection />
       {/* <Features /> */}
       <WarroomDifference />
-      <DefaultDemo />
+      <Cert/>
+      {/* <DefaultDemo /> */}
       <Ticket />
       <Testimonials />
+      
       <FAQSection />
       <Footer />
     </div>

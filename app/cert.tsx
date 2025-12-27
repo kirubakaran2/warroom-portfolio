@@ -9,12 +9,15 @@ export default function CertificateGallery() {
     '/cert0.jpeg',
     '/cert1.jpeg',
     '/cert2.jpeg',
-    '/cert3.jpeg',
+    '/cert3.jpg',
     '/cert7.jpeg',
-    '/cert4.jpeg',
-    '/cert5.jpeg',
+    '/cert4.jpg',
+    '/cert5.png',
     '/cert6.jpeg',
-    '/cert8.jpeg',
+    '/cert8.png',
+    '/cert10.png',
+    '/cert11.jpg',
+    '/cert12.png',
   ];
 
   return (

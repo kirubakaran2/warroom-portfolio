@@ -30,7 +30,7 @@ export default function About() {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-                            The Trader Behind <span className="text-yellow-500">Warroom</span>?
+                            The Trader Behind <span className="text-yellow-500">WarRoom</span>?
                         </h2>
                         <h3 className="text-xl md:text-2xl text-gray-400 font-bitcount">
                             ICT_Dinesh

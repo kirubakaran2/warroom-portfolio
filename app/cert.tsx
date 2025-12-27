@@ -6,15 +6,18 @@ export default function CertificateGallery() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const certificates = [
-    '/cert0.jpeg',
+    '/cert3.jpg',
     '/cert1.jpeg',
     '/cert2.jpeg',
-    '/cert3.jpg',
+    '/sudhagarl.png',
+    '/surendhar.jpg',
+    '/karthick.jpeg',
+
     '/cert7.jpeg',
-    '/cert4.jpg',
+
     '/cert5.png',
     '/cert6.jpeg',
-    '/cert8.png',
+
     '/cert10.png',
     '/cert11.jpg',
     '/cert12.png',
@@ -23,15 +26,23 @@ export default function CertificateGallery() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="relative flex h-[10vh] items-center justify-center mb-10">
-                <div aria-hidden className={cn(
-                  'absolute -top-1/2 left-1/2 h-[120vmin] w-[140vmin] -translate-x-1/2 rounded-full',
-                  'bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,.08),transparent_55%)] blur-[40px]'
-                )}/>
-                <h1 className="text-center text-4xl md:text-6xl font-bold text-white tracking-tight">
-                  Students Achievements
-                </h1>
-              </div>
+        <div className="relative flex h-[10vh] flex-col items-center justify-center mb-10 gap-2">
+  <div
+    aria-hidden
+    className={cn(
+      'absolute -top-1/2 left-1/2 h-[120vmin] w-[140vmin] -translate-x-1/2 rounded-full',
+      'bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,.08),transparent_55%)] blur-[40px]'
+    )}
+  />
+
+  <h1 className="text-center text-4xl md:text-6xl font-bold text-white tracking-tight">
+    Students <span className="text-yellow-500">Achievements</span>
+  </h1>
+
+  <p className="relative mt-2 text-center text-lg md:text-xl font-bold italic text-gray-200">
+    Trained Here, Paid by the Market.
+  </p>
+</div>
 
         {/* Masonry Grid for Different Sizes */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -49,8 +60,8 @@ export default function CertificateGallery() {
                     relative overflow-hidden rounded-xl bg-slate-800/50 backdrop-blur-sm
                     border border-slate-700/50
                     transition-all duration-500 ease-out
-                    ${hoveredIndex === index 
-                      ? 'scale-[1.02] shadow-2xl shadow-blue-500/20 -translate-y-1 border-blue-500/50' 
+                    ${hoveredIndex === index
+                      ? 'scale-[1.02] shadow-2xl shadow-blue-500/20 -translate-y-1 border-blue-500/50'
                       : 'scale-100 shadow-lg'
                     }
                   `}

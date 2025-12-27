@@ -23,7 +23,6 @@ export default function CertificateGallery() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="relative flex h-[10vh] items-center justify-center mb-10">
                 <div aria-hidden className={cn(
                   'absolute -top-1/2 left-1/2 h-[120vmin] w-[140vmin] -translate-x-1/2 rounded-full',

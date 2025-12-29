@@ -62,7 +62,7 @@ export default function About() {
                             {/* Text Section */}
                             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-300">
                                 <p>
-                                    I’m <span className="text-white font-bold">Dinesh</span>, and I build traders, not followers. At <span className="text-white font-bold">Warroom</span>, we strip away the noise and focus on what actually matters: <span className="text-yellow-400">strategy</span>, <span className="text-yellow-400">execution</span>, and <span className="text-yellow-400">mindset</span>.
+                                    I’m <span className="text-white font-bold">Dinesh</span>, and I build traders, not followers. At <span className="text-white font-bold">WarRoom</span>, we strip away the noise and focus on what actually matters: <span className="text-yellow-400">strategy</span>, <span className="text-yellow-400">execution</span>, and <span className="text-yellow-400">mindset</span>.
                                 </p>
 
                                 <p>

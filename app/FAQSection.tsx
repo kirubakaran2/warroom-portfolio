@@ -7,11 +7,7 @@ import { useState } from "react"
 const faqs = [
   {
     question: "Is this program beginner-friendly?",
-    answer: "Yes — the course is structured from basics to advanced concepts."
-  },
-  {
-    question: "Will I get live sessions?",
-    answer: "Yes, weekly live sessions + Q&A."
+    answer: "No - You need at least 1-2 years of experience in ICT Trading."
   },
   {
     question: "Can I trade any market?",

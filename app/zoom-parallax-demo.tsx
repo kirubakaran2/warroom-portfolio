@@ -129,7 +129,7 @@ function MobileScroller({images}:{images:any[]}) {
         <div key={i} className="flex-shrink-0 w-44 h-64 rounded-xl overflow-hidden relative shadow-xl">
           <img src={item.image} className="w-full h-full object-cover"/>
           <div className="absolute bottom-0 inset-x-0 bg-black/80 text-white text-xs py-2 text-center">
-           
+
           </div>
         </div>
       ))}

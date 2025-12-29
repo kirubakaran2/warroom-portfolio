@@ -51,7 +51,7 @@ const item = {
 
 export default function CouponsSection() {
   return (
-    <section id="coupons" className="relative w-full overflow-hidden bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white font-plusJakartaSans py-24">
+    <section id="coupons" className="relative w-full overflow-hidden bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white font-plusJakartaSans py-20">
       {/* Animated background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 via-teal-600/10 to-cyan-600/10" />

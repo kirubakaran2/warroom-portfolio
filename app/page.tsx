@@ -1,8 +1,6 @@
 import { Navbar } from "./Navbar";
 import About from "./About";
 import WarroomDifference from "./WarroomDifference";
-import { GlassCard } from "./components/ui/glass-card";
-import DefaultDemo from "./zoom-parallax-demo";
 import Testimonials from "./testimonials";
 import SectionOne from "./SectionOne";
 import Footer from "./Footer";
@@ -33,13 +31,10 @@ export default function Home() {
       <SectionOne />
       <About />
       <CouponsSection />
-      {/* <Features /> */}
       <WarroomDifference />
       <Cert/>
-      {/* <DefaultDemo /> */}
       <Ticket />
       <Testimonials />
-      
       <FAQSection />
       <Footer />
     </div>

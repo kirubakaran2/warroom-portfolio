@@ -30,9 +30,9 @@ export default function Footer() {
           <Link href="/refund" className="hover:text-white transition-colors text-center">
             Refund Policy
           </Link>
-         
+
         </div>
-         <p className="text-center mt-3  sm:flex-row justify-center gap-4 sm:gap-8 text-sm text-gray-400">© 2025 WarRoom Trading Mentorship. All rights reserved.</p>
+         <p className="text-center mt-3  sm:flex-row justify-center gap-4 sm:gap-8 text-sm text-gray-400">© 2025 WarRoom. All rights reserved.</p>
       </div>
     </footer>
   );

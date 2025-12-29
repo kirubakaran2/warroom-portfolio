@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import CustomCursor from "./components/customcursor" 
+import CustomCursor from "./components/customcursor"
 import { Instagram, Youtube, TrendingUp, Target, Activity, TrendingDown, BarChart3, Zap } from "lucide-react"
 import { PiDiscordLogoFill } from "react-icons/pi"
 import { FaXTwitter } from "react-icons/fa6"
@@ -21,7 +21,7 @@ type HoverableIconProps = {
 const HoverableIcon: React.FC<HoverableIconProps> = ({ href, label, children }) => {
   const [hover, setHover] = useState(false)
 
-  // NOTE FOR MOBILE: On touch devices, mouse events are unreliable. 
+  // NOTE FOR MOBILE: On touch devices, mouse events are unreliable.
   // The tooltip logic should be adjusted or disabled for true mobile responsiveness.
   return (
     <div
@@ -167,7 +167,7 @@ export default function HeroOne() {
       <div className="absolute bottom-4 right-4 z-20 hidden md:block text-right">
         <div className="w-10 h-10 border-b-2 border-r-2 border-white/20 rounded-br-lg ml-auto" />
       </div>
-      
+
       {/* ================= MAIN CONTENT ================= */}
       <div className="relative z-10 h-full w-full flex flex-col items-center justify-center min-h-screen px-6 sm:px-10 py-6 md:py-10 pt-24 md:pt-20">
 
@@ -199,7 +199,7 @@ export default function HeroOne() {
                       rotate: 0,
                       y: [0, -2, 0]
                     }}
-                    
+
                     transition={{
                       opacity: { duration: 0.5 },
                       scale: { duration: 0.5 },
@@ -237,7 +237,7 @@ export default function HeroOne() {
             <span style={{ display: 'inline-block', borderRight: '.15em solid #fff' }}>{displayedText}</span>
           </motion.p>
         </div>
-        
+
         {/* Secondary Title/Description */}
         <motion.p
           className="mt-2 md:mt-4 text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-center max-w-2xl px-2"
@@ -245,7 +245,7 @@ export default function HeroOne() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
         >
-          Join the <em>Warroom</em> — a private, elite mentorship designed to turn inconsistent traders into confident, rule-based performers.
+          Join the <em>WarRoom</em> — a private, elite mentorship designed to turn inconsistent traders into confident, rule-based performers.
         </motion.p>
 
         {/* Buttons */}

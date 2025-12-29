@@ -112,7 +112,7 @@ export default function WarroomDifference() {
                         href="https://discord.com/invite/qnpfuETS"
                         className="inline-block px-10 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-shadow"
                     >
-                        Join Warroom Today
+                        Join WarRoom Today
                     </a>
                 </motion.div>
       </div>

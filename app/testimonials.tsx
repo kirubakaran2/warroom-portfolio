@@ -89,7 +89,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
         >
-          <div className="flex justify-center mt-20">
+          <div className="flex justify-center mt-5">
             <div className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-400 py-2 px-6 rounded-full font-medium text-sm tracking-wider uppercase shadow-lg backdrop-blur-sm">
               Testimonials
             </div>

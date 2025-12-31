@@ -136,7 +136,7 @@ const TestimonialsMobile = ({ testimonials }: { testimonials: Testimonial[] }) =
   }, [currentIndex, goToSlide]);
 
   return (
-    <div className="relative md:hidden mt-12 pb-20 px-4">
+    <div className="relative md:hidden mt-12 pb-8 px-4">
       {/* Navigation Buttons */}
       <div className="flex justify-between items-center absolute top-1/2 -translate-y-1/2 left-4 right-4 z-20 pointer-events-none">
         <motion.button

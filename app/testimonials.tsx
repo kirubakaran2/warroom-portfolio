@@ -2,7 +2,9 @@
 import React from "react";
 import { motion } from "motion/react";
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
-import { TestimonialsMobile } from "./testimonials-mobile";
+import dynamic from "next/dynamic";
+
+const TestimonialsMobile = dynamic(() => import("./testimonials-mobile"), { ssr: false });
 import { GridVignetteBackground } from '@/app/components/ui/grid-vignette-background'
 import emoji1 from './genmoji7.jpeg'
 import emoji2 from './genmoji5.jpeg'

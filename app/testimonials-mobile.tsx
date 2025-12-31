@@ -11,7 +11,7 @@ interface Testimonial {
   role: string;
 }
 
-export const TestimonialsMobile = ({ testimonials }: { testimonials: Testimonial[] }) => {
+const TestimonialsMobile = ({ testimonials }: { testimonials: Testimonial[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -258,3 +258,5 @@ export const TestimonialsMobile = ({ testimonials }: { testimonials: Testimonial
     </div>
   );
 };
+
+export default TestimonialsMobile;

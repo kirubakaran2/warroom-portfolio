@@ -161,7 +161,16 @@ export default function AboutUsPage() {
               </div>
             </motion.div>
           </div>
+          <div className="text-center">
+          <a
+            href="/"
+            className="inline-block mt-5 px-8 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center"
+          >
+            Back to Home
+          </a>
         </div>
+        </div>
+        
       </div>
       <Footer />
     </>

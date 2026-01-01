@@ -61,7 +61,7 @@ const Ticket: React.FC = () => {
                   Welcome to your trading transformation. Learn real market skills, gain deep insights,
                   and build unshakable confidence to trade smarter, manage risk better, and win consistently.
                 </p>
-                <span className="text-6xl font-bold">₹50,000</span>
+                <span className="text-6xl font-bold">₹XX,XXX</span>
               </div>
 
               {/* RIGHT */}
